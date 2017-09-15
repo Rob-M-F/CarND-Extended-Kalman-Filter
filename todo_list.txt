@@ -1,0 +1,33 @@
+Extended Kalman Filter todos:
+FusionEKF.cpp
+  FusionEKF::FusionEKF() // Constructor
+    * Finish initializing the FusionEKF.
+    * Set the process and measurement noises
+  FusionEKF::ProcessMeasurement()
+	If not is_initialized:
+	  * Initialize the state ekf_.x_ with the first measurement.
+	  * Create the covariance matrix.
+	  * Remember: you'll need to convert radar from polar to cartesian coordinates.
+	  * Convert radar from polar to cartesian coordinates and initialize state.
+      * Initialize state.
+	Prediction:
+      * Update the state transition matrix F according to the new elapsed time.
+        - Time is measured in seconds.
+      * Update the process noise covariance matrix.
+      * Use noise_ax = 9 and noise_ay = 9 for your Q matrix.
+	Update:
+      * Use the sensor type to perform the update step.
+      * Update the state and covariance matrices.
+	  * Apply Radar updates
+	  * Apply Laser updates
+kalman_filter.cpp
+  Update:
+    * Update the state using Kalman Filter equations
+  UpdateEKF:
+    * Update the state using Extended Kalman Filter equations
+tools.cpp
+  Tools:
+    CalculateRMSE:
+	   * CalculateRMSE
+	 CalculateJacobian:
+	   * Calculate Jacobian Matrix
